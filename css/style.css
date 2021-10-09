@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.FirstSection {
+  background: url("../img/bg.PNG") center center/cover;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.FirstSection__col__1 {
+  padding: 5.5rem 0 3rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.FirstSection__col__1 img {
+  width: 220px;
+}
+
+.FirstSection__col__2 {
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.FirstSection__col__2 h1 {
+  color: #fff;
+  text-align: center;
+}
+
+.FirstSection__col__2 h3 {
+  color: rgb(199, 199, 199);
+  text-align: center;
+}
+
+.FirstSection__col__3 {
+  padding: 3rem !important;
+  border-radius: 0.8rem;
+  background-color: #fff;
+}
+.FirstSection__col__3 form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.FirstSection__col__3 .form__items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form__items_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+}
+
+.FirstSection__col__3 .form__items label {
+  color: #000;
+  font-size: 1.4rem;
+}
+
+.FirstSection__col__3 .form__items span {
+  color: rgb(228, 7, 7);
+  font-size: 1.4rem;
+}
+
+.span__hidden {
+  display: none;
+}
+
+.FirstSection__col__3 .form__items input {
+  font-size: 1.4rem;
+  outline: none;
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  border: none;
+  border: 1px solid #86b6f9;
+}
+
+.FirstSection__col__3 .form__items input::placeholder {
+  color: rgb(207, 207, 207);
+  font-weight: 600;
+}
+
+.FirstSection__col__3 .formBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.FirstSection__col__3 .formBtn button {
+  background-color: #86b6f9;
+  border: none;
+  color: #fff;
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.FirstSection__col__3 a {
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.FirstSection__col__4 {
+  color: #fff;
+  text-align: center;
+  padding: 4rem 0;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.FirstSection__col__4 h5 {
+  font-size: 1.6rem;
+  color: rgb(199, 199, 199);
+}
+
+.FirstSection__col__4 a {
+  font-size: 1.6rem;
+  color: rgb(199, 199, 199);
+  text-decoration: none;
+}
+
+.FirstSection__col__4 .innerBluredBox {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: auto;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: rgba(199, 199, 199, 0.199);
+  font-weight: 600;
+}
+
+.FirstSection__col__4 a:hover {
+  color: rgb(199, 199, 199);
+}
+
+.LockIcon {
+  font-size: 1.6rem;
+  color: rgb(199, 199, 199);
+}
+
+.FirstSection__col__5 {
+  color: rgb(199, 199, 199);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 4rem 0 0 0;
+}
+
+.FirstSection__col__5 p {
+  font-size: 1.6rem;
+}
+
+.FirstSection__col__5 p a {
+  text-decoration: none;
+  color: rgb(199, 199, 199);
+}
+
+.FirstSection__col__5 p a:hover {
+  color: rgb(199, 199, 199);
+}
+
+@media (max-width: 1200px) {
+  .FirstSection__col__4 .innerBluredBox {
+    width: 60%;
+  }
+}
+
+@media (max-width: 500px) {
+  .FirstSection__col__4 .innerBluredBox {
+    width: 90%;
+  }
+}
+
+/**********************/
+/* SECOND PAGE CSS */
+/**********************/
+.verifyBox {
+  padding: 3rem !important;
+  border-radius: 0.8rem;
+  background-color: #fff;
+}
+
+.backAgain {
+  display: flex;
+  gap: 1rem;
+  font-weight: 600;
+  align-items: center;
+  color: rgb(139, 139, 139);
+}
+
+.backAgain p {
+  font-size: 1.6rem;
+}
+
+.verifyBox .backArrow {
+  font-size: 1.6rem;
+  top: -2px;
+  position: relative;
+}
+
+.verifyBox .iconDiv {
+  font-size: 2.3rem;
+  border-radius: 50%;
+  background: #0c6cf2;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.desktopIcon {
+  color: #fff;
+}
+
+.verifyBox .secondInnerBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.secondInnerBox h2 {
+  font-weight: 600;
+}
+
+.secondInnerBox p {
+  font-size: 1.4rem;
+  color: rgb(139, 139, 139);
+  font-weight: 500;
+  padding: 0 2rem;
+}
+
+.lastButtonHolder {
+  width: 100%;
+}
+
+.lastButtonHolder button {
+  background-color: #fff;
+  border: none;
+  color: #0c6cf2;
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  width: 100%;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  border: 1px solid #0c6cf2;
+  transition: all 0.3s;
+}
+
+.lastButtonHolder button:hover {
+  background-color: rgb(236, 236, 236);
+}
+
+.popup {
+  background-color: #fff;
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 2rem 1rem 2rem;
+  border-radius: 0.5rem;
+  border-left: 10px solid #0c6cf2;
+  display: none;
+}
+
+.popupBoxContainer {
+  position: absolute;
+  top: 18%;
+  right: 5%;
+}
+
+.popup p {
+  font-size: 1.6rem;
+  color: #000;
+}
+
+.Close__Popup {
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+
+@media (max-width: 1200px) {
+  .popupBoxContainer {
+    top: 12%;
+    right: 1%;
+  }
+  .popup {
+    width: 400px;
+  }
+  .popup p {
+    font-size: 1.2rem;
+  }
+  .Close__Popup {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .popupBoxContainer {
+    right: 5%;
+    top: 85%;
+  }
+  .Close__Popup {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .popup {
+    width: 300px;
+  }
+  .popup p {
+    font-size: 1rem;
+  }
+  .Close__Popup {
+    font-size: 1.6rem;
+  }
+}
